@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    No <base> tag, on purpose. A game portal serves the game from a path of
+    its own and accepts relative paths only, and without a base every path
+    resolves against the folder index.html is in. A relative base would do
+    the same, but `flutter run` refuses to start with one.
+  -->
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="2048 variation game">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="xsquare">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>xsquare</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* No text selection, as game portals ask: a long press on a phone would
+       otherwise start selecting instead of playing. */
+    body {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
